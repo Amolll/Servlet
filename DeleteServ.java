@@ -33,9 +33,7 @@ public class DeleteServ extends HttpServlet {
 		response.setContentType("text/html");
 		PrintWriter out=response.getWriter();
 		int regId=Integer.parseInt(request.getParameter("userid"));
-		
-		out.println(regId);
-		
+				
 		try
 		{
 			DB db=new DB();

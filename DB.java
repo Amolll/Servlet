@@ -54,21 +54,12 @@ public class DB
 		
 	}
 	
-	public boolean isUpdate(int regId)throws Exception
+	public ResultSet isSearch(int regId)throws Exception
 	{
-		stmt=conn.prepareStatement("update from register where regid=?");
+ 		stmt=conn.prepareStatement("select * from register where regid=?");
 		stmt.setInt(1, regId);
-		int value=stmt.executeUpdate();
-		if(value>0)
-		{
-			
-			return true;
-		}
-		else
-		{
-			return false;
-		}
-		
+		rs=stmt.executeQuery();
+		return rs;	
 	}
 	
 }

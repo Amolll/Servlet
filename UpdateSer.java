@@ -33,13 +33,15 @@ public class UpdateSer extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 
+		
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
-		 int regId = Integer.parseInt(request.getParameter("userid"));
+		
+		int regId = Integer.parseInt(request.getParameter("userid"));
 
 		 if(regId!=0)
 		{
-			RequestDispatcher r=request.getRequestDispatcher("update.html");
+			RequestDispatcher r=request.getRequestDispatcher("view");
 			r.forward(request, response);
 			
 		String btn = request.getParameter("s");
